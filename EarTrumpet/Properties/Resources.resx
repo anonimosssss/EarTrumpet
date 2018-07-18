@@ -212,4 +212,7 @@
   <data name="SettingsUseLegacyEarTrumpetIcon" xml:space="preserve">
     <value>Use legacy EarTrumpet icon</value>
   </data>
+  <data name="OpenSoundSettingsText" xml:space="preserve">
+    <value>Open sound settings</value>
+  </data>
 </root>

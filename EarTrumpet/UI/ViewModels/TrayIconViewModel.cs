@@ -35,6 +35,7 @@ namespace EarTrumpet.UI.ViewModels
         public RelayCommand OpenSoundsControlPanelCommand { get; }
         public RelayCommand OpenLegacyVolumeMixerCommand { get; }
         public RelayCommand OpenEarTrumpetVolumeMixerCommand { get; }
+        public RelayCommand OpenSoundSettingsCommand { get; }
         public RelayCommand<DeviceViewModel> ChangeDeviceCommand { get; }
         public RelayCommand OpenFeedbackHubCommand { get; }
         public RelayCommand OpenFlyoutCommand { get; }
@@ -71,6 +72,7 @@ namespace EarTrumpet.UI.ViewModels
             OpenFeedbackHubCommand = new RelayCommand(FeedbackService.OpenFeedbackHub);
             OpenFlyoutCommand = new RelayCommand(() => _mainViewModel.OpenFlyout(FlyoutShowOptions.Pointer));
             ExitCommand = new RelayCommand(App.Current.Shutdown);
+            OpenSoundSettingsCommand = new RelayCommand(() => ProcessHelper.StartNoThrow("ms-settings:sound"));
         }
 
         private void LoadIconResources()

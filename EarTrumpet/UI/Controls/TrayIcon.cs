@@ -93,6 +93,7 @@ namespace EarTrumpet.UI.Controls
             AddItem(Resources.PlaybackDevicesText, _trayViewModel.OpenPlaybackDevicesCommand);
             AddItem(Resources.RecordingDevicesText, _trayViewModel.OpenRecordingDevicesCommand);
             AddItem(Resources.SoundsControlPanelText, _trayViewModel.OpenSoundsControlPanelCommand);
+            AddItem(Resources.OpenSoundSettingsText, _trayViewModel.OpenSoundSettingsCommand);
             cm.Items.Add(new Separator { Style = separatorStyle });
             AddItem(Resources.SettingsWindowText, _trayViewModel.OpenSettingsCommand);
             AddItem(Resources.ContextMenuSendFeedback, _trayViewModel.OpenFeedbackHubCommand);
