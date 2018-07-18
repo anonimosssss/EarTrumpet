@@ -191,11 +191,12 @@ namespace EarTrumpet.UI.ViewModels
             string toolTipText;
             if (_defaultPlaybackDevice != null)
             {
-                var otherText = "EarTrumpet: 100% - ";
-                var dev = _defaultPlaybackDevice.DisplayName;
+                var stateText = _defaultPlaybackDevice.IsMuted ? Resources.MutedText : $"{_defaultPlaybackDevice.Volume}%";
+                var prefixText = $"EarTrumpet: {stateText} - ";
+                var deviceName = _defaultPlaybackDevice.DisplayName;
                 // API Limitation: "less than 64 chars" for the tooltip.
-                dev = dev.Substring(0, Math.Min(63 - otherText.Length, dev.Length));
-                toolTipText = $"EarTrumpet: {_defaultPlaybackDevice.Volume}% - {dev}";
+                deviceName = deviceName.Substring(0, Math.Min(63 - prefixText.Length, deviceName.Length));
+                toolTipText = prefixText + deviceName;
             }
             else
             {
