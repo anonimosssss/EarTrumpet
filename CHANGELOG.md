@@ -4,6 +4,8 @@
 - Fixed System Sounds icon on ARM64
 - High Contrast colors updated
 - Enable collecting debug logs when we fail to enumerate devices
+- Added 'Open system sounds' open to tray context menu
+- Added a muted state to the tray icon tooltip text 
 
 ## 2.0.4.0
 - Scoped the mouse wheel scrolling to only over the Notification Area icon.
